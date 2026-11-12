@@ -6,11 +6,11 @@
 - **README with local setup:** included (`README.md`).
 - **Architecture note:** included (`ARCHITECTURE.md`).
 - **AI workflow note:** included (`AI_WORKFLOW.md`).
-- **Screenshots:** included (`screenshots/`).
+- **Screenshots:** optional; separate screenshots are available in the original project package. Verify they were included in the uploaded Google Drive folder if referenced.
 - **Automated tests:** included; **7 passed locally**.
-- **Live product URL:** https://folio-document-editor.onrender.com (reported Live on Render; public browser smoke test pending).
+- **Live product URL:** https://folio-document-editor.onrender.com (reported Live on Render; submitter tested creation, saving, sharing and imports).
 - **Walkthrough video URL:** https://www.loom.com/share/89410187f7844bd78ad3046578d4bf00 (link supplied; public-view permissions and duration not independently verified).
-- **Google Drive folder URL:** **PENDING — must upload this project and paste the folder URL here.**
+- **Google Drive folder URL:** https://drive.google.com/drive/folders/1D_bGIJBO_fLPU6rEO3wZAM0t6dA_0-jD?usp=sharing (folder link supplied by submitter; viewer access and contents not independently verified).
 
 ## Public reviewer links
 
@@ -18,9 +18,9 @@
 - **API health:** https://folio-document-editor.onrender.com/api/health
 - **Source:** https://github.com/saikiran6999/folio-document-editor
 - **Video:** https://www.loom.com/share/89410187f7844bd78ad3046578d4bf00 (check public playback in an incognito window)
-- **Google Drive:** Pending (add the shared folder URL before submission)
+- **Google Drive:** https://drive.google.com/drive/folders/1D_bGIJBO_fLPU6rEO3wZAM0t6dA_0-jD?usp=sharing
 
-**Public verification boundary:** The submitter reports the Render service is Live and personally verified document creation/saving, sharing, and file import in a browser. All seven automated tests passed locally. The live site and Loom's public permissions have not been independently verified here. SQLite on Render's ephemeral disk is not durable across service replacements.
+**Public verification boundary:** The submitter reports the Render service is Live and personally verified document creation/saving, sharing, and file import in a browser. All seven automated tests passed locally. Third-party public access to the live site, Loom video, and Google Drive folder has not been independently verified here. SQLite on Render's ephemeral disk is not durable across service replacements.
 
 ## Reviewer quick start
 
