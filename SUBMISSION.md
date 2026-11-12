@@ -2,15 +2,25 @@
 
 ## Submission status
 
-- **Source code:** included in this folder.
+- **Source code:** included in this folder and published at https://github.com/saikiran6999/folio-document-editor.
 - **README with local setup:** included (`README.md`).
 - **Architecture note:** included (`ARCHITECTURE.md`).
 - **AI workflow note:** included (`AI_WORKFLOW.md`).
 - **Screenshots:** included (`screenshots/`).
 - **Automated tests:** included; **7 passed locally**.
-- **Live product URL:** **PENDING — must deploy and paste the public URL here.**
+- **Live product URL:** https://folio-document-editor.onrender.com (reported Live on Render; public browser smoke test pending).
 - **Walkthrough video URL:** **PENDING — must record and replace `video_url.txt`.**
 - **Google Drive folder URL:** **PENDING — must upload this project and paste the folder URL here.**
+
+## Public reviewer links
+
+- **Application:** https://folio-document-editor.onrender.com
+- **API health:** https://folio-document-editor.onrender.com/api/health
+- **Source:** https://github.com/saikiran6999/folio-document-editor
+- **Video:** Pending (replace `video_url.txt` before submission)
+- **Google Drive:** Pending (add the shared folder URL before submission)
+
+**Public verification boundary:** The submitter reports the Render service is Live. All seven automated tests passed locally, but a complete public browser smoke test is still required. SQLite on Render's ephemeral disk is not durable across service replacements.
 
 ## Reviewer quick start
 
@@ -37,11 +47,11 @@ Create, rename, rich-text edit, autosave, reopen, `.txt`/`.md`/basic `.docx` imp
 
 ## Incomplete / intentionally deprioritized
 
-No real-time simultaneous collaboration, production authentication, comments, history, or complex Word formatting. On hosts with ephemeral disks, SQLite does not survive instance replacement. **The deployment and video are not yet completed.**
+No real-time simultaneous collaboration, production authentication, comments, history, or complex Word formatting. On hosts with ephemeral disks, SQLite does not survive instance replacement. **The public URL is available; browser verification and the recording remain pending.**
 
 ## What I would build with another 2–4 hours
 
-First, deploy with durable storage and test public access. Next, implement real authentication and upgrade the editor to TipTap/ProseMirror. Then add basic revision history.
+First, add durable hosted storage (managed Postgres or persistent volume) and verify redeploy persistence. Next, implement real authentication and upgrade the editor to TipTap/ProseMirror. Then add basic revision history.
 
 ## Included files
 
@@ -69,6 +79,7 @@ folio_assignment/
 ├── README.md
 ├── ARCHITECTURE.md
 ├── AI_WORKFLOW.md
+├── PUBLIC_TEST_CHECKLIST.md
 ├── WALKTHROUGH_SCRIPT.md
 ├── SUBMISSION.md
 ├── video_url.txt
