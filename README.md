@@ -4,7 +4,8 @@ A focused, Google Docs–inspired writing workspace built for Ajaia's AI-Native 
 
 **Live demo:** https://folio-document-editor.onrender.com  
 **API health:** https://folio-document-editor.onrender.com/api/health  
-**GitHub:** https://github.com/saikiran6999/folio-document-editor
+**GitHub:** https://github.com/saikiran6999/folio-document-editor  
+**Walkthrough:** https://www.loom.com/share/89410187f7844bd78ad3046578d4bf00
 
 Desktop, sharing, and mobile screenshots are included in the submission ZIP under `screenshots/`.
 
@@ -112,7 +113,7 @@ A `Dockerfile` and `render.yaml` are included. A simple deployment path is to pu
 
 **Persistence caveat:** Some free hosts (including Render's ephemeral instances) do not retain local files across restarts or redeployments. On those hosts, documents persist across page refreshes while the instance remains alive, but **not** across instance replacement. For restart-durable production hosting, mount a persistent volume at `/app/data` (Docker) or move storage to a managed database. Do not describe an ephemeral deployment as fully durable.
 
-**Live deployment:** https://folio-document-editor.onrender.com (reported Live by submitter; final browser verification pending). The walkthrough video and Google Drive folder still need to be supplied. See `SUBMISSION.md` and `PUBLIC_TEST_CHECKLIST.md`.
+**Live deployment:** https://folio-document-editor.onrender.com (reported Live by submitter; final browser verification pending). The walkthrough URL is available; verify that it is publicly viewable. The Google Drive folder still needs to be supplied. See `SUBMISSION.md` and `PUBLIC_TEST_CHECKLIST.md`.
 
 ## Known limitations / intentional scope cuts
 
