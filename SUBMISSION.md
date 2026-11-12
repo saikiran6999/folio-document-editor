@@ -9,7 +9,7 @@
 - **Screenshots:** included (`screenshots/`).
 - **Automated tests:** included; **7 passed locally**.
 - **Live product URL:** https://folio-document-editor.onrender.com (reported Live on Render; public browser smoke test pending).
-- **Walkthrough video URL:** **PENDING — must record and replace `video_url.txt`.**
+- **Walkthrough video URL:** https://www.loom.com/share/89410187f7844bd78ad3046578d4bf00 (link supplied; public-view permissions and duration not independently verified).
 - **Google Drive folder URL:** **PENDING — must upload this project and paste the folder URL here.**
 
 ## Public reviewer links
@@ -17,10 +17,10 @@
 - **Application:** https://folio-document-editor.onrender.com
 - **API health:** https://folio-document-editor.onrender.com/api/health
 - **Source:** https://github.com/saikiran6999/folio-document-editor
-- **Video:** Pending (replace `video_url.txt` before submission)
+- **Video:** https://www.loom.com/share/89410187f7844bd78ad3046578d4bf00 (check public playback in an incognito window)
 - **Google Drive:** Pending (add the shared folder URL before submission)
 
-**Public verification boundary:** The submitter reports the Render service is Live. All seven automated tests passed locally, but a complete public browser smoke test is still required. SQLite on Render's ephemeral disk is not durable across service replacements.
+**Public verification boundary:** The submitter reports the Render service is Live and personally verified document creation/saving, sharing, and file import in a browser. All seven automated tests passed locally. The live site and Loom's public permissions have not been independently verified here. SQLite on Render's ephemeral disk is not durable across service replacements.
 
 ## Reviewer quick start
 
@@ -47,7 +47,7 @@ Create, rename, rich-text edit, autosave, reopen, `.txt`/`.md`/basic `.docx` imp
 
 ## Incomplete / intentionally deprioritized
 
-No real-time simultaneous collaboration, production authentication, comments, history, or complex Word formatting. On hosts with ephemeral disks, SQLite does not survive instance replacement. **The public URL is available; browser verification and the recording remain pending.**
+No real-time simultaneous collaboration, production authentication, comments, history, or complex Word formatting. On hosts with ephemeral disks, SQLite does not survive instance replacement. **The public application and walkthrough URL have been supplied. The submitter reports successful browser testing of creation, saving, sharing, and imports. Third-party public playback of the video has not been independently verified.**
 
 ## What I would build with another 2–4 hours
 
