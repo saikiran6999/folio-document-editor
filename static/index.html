@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Folio — Write better, together.</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Workspace navigation">
+      <div class="brand-row">
+        <div class="brand-mark" aria-hidden="true"><span>f</span><span class="brand-dot"></span></div>
+        <span class="brand-name">folio<span class="brand-period">.</span></span>
+        <span class="brand-beta">BETA</span>
+      </div>
+
+      <div class="workspace-label"><span class="workspace-avatar">W</span><span>Workspace</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></div>
+
+      <div class="primary-actions">
+        <button class="new-button" id="newDocBtn"><span class="action-plus">+</span> New document <span class="new-shortcut">N</span></button>
+        <button class="import-button" id="importBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m0 0L7 8m5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> Import a file <span class="file-types">.txt · .md · .docx</span></button>
+        <input type="file" id="fileInput" accept=".txt,.md,.docx" hidden aria-label="Import a TXT, Markdown, or DOCX file">
+      </div>
+
+      <label class="search-wrap" for="searchInput"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="searchInput" placeholder="Search documents" autocomplete="off"><span>⌘ K</span></label>
+
+      <nav class="doc-nav" aria-label="Documents">
+        <div class="nav-section-heading"><span>YOUR DOCUMENTS</span><span id="ownedCount">0</span></div>
+        <div id="ownedDocs" class="doc-list"></div>
+        <div class="nav-section-heading shared-heading"><span>SHARED WITH YOU</span><span id="sharedCount">0</span></div>
+        <div id="sharedDocs" class="doc-list"></div>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span class="tip-sparkle">✳</span><div><strong>Good ideas grow together.</strong><p>Share a document to bring someone into the conversation.</p></div></div>
+        <div class="demo-label">DEMO ACCOUNT <span class="demo-pill">Switch to test sharing</span></div>
+        <label class="account-picker" for="userSelect"><span class="account-avatar" id="accountAvatar">AM</span><span class="account-details"><strong id="accountName">Alex Morgan</strong><small id="accountEmail">alex@folio.demo</small></span><select id="userSelect" aria-label="Switch demo account"></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></label>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="topbar-left"><button class="mobile-menu" id="menuBtn" aria-label="Toggle navigation">☰</button><span class="breadcrumb-home">Workspace</span><span class="breadcrumb-divider">/</span><span class="breadcrumb-current" id="breadcrumbTitle">Overview</span></div>
+        <div class="topbar-right"><span class="save-indicator" id="saveIndicator" role="status"><span class="save-dot"></span> All changes saved</span><button class="top-share" id="topShareBtn" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-2v6m-3-3h6"/></svg> Share</button></div>
+      </header>
+
+      <section class="welcome-screen" id="welcomeScreen" hidden>
+        <div class="welcome-graphic" aria-hidden="true"><div class="welcome-page"><span></span><span></span><span></span><span></span></div><span class="welcome-star">✳</span></div>
+        <div class="welcome-eyebrow">YOUR CREATIVE SPACE</div>
+        <h1>Every great idea<br>starts somewhere<span>.</span></h1>
+        <p>Give your thoughts a home. Create a document, import a file, or open something from your workspace.</p>
+        <button id="welcomeCreateBtn" class="welcome-cta">Create a document <span>↗</span></button>
+      </section>
+
+      <section class="document-view" id="documentView" hidden aria-label="Document editor">
+        <div class="doc-heading"><div class="doc-heading-top"><span class="doc-eyebrow">DOCUMENT <span class="doc-eyebrow-separator">/</span> <span id="documentOwnerTag">MY WORKSPACE</span></span><span class="doc-access" id="docAccess">OWNER</span></div><input id="docTitle" class="document-title" aria-label="Document title" placeholder="Untitled document" maxlength="120"><div class="doc-subheading"><span id="docOwnerLine">Created by Alex Morgan</span><span class="dot-separator">·</span><span id="docUpdated">Updated just now</span><span class="dot-separator">·</span><span class="autosave-note">Autosaved</span></div></div>
+
+        <div class="editor-toolbar" role="toolbar" aria-label="Text formatting">
+          <div class="toolbar-group"><select id="blockFormat" class="block-select" aria-label="Text style"><option value="p">Normal text</option><option value="h1">Heading 1</option><option value="h2">Heading 2</option><option value="h3">Heading 3</option></select></div>
+          <span class="toolbar-divider"></span>
+          <div class="toolbar-group"><button class="tool-button tool-bold" data-command="bold" title="Bold (Ctrl+B)" aria-label="Bold">B</button><button class="tool-button tool-italic" data-command="italic" title="Italic (Ctrl+I)" aria-label="Italic">I</button><button class="tool-button tool-underline" data-command="underline" title="Underline (Ctrl+U)" aria-label="Underline">U</button></div>
+          <span class="toolbar-divider"></span>
+          <div class="toolbar-group"><button class="tool-button" data-command="insertUnorderedList" title="Bulleted list" aria-label="Bulleted list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg></button><button class="tool-button" data-command="insertOrderedList" title="Numbered list" aria-label="Numbered list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 4v4M3 4h2M3 14h3l-3 4h3"/></svg></button></div>
+          <span class="toolbar-divider"></span>
+          <div class="toolbar-group"><button class="tool-button" data-command="removeFormat" title="Clear formatting" aria-label="Clear formatting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h14M11 7l-5 12M8 14h7M17 17l4 4m0-4-4 4"/></svg></button></div>
+          <div class="toolbar-spacer"></div>
+          <button id="saveNowBtn" class="save-now" title="Save now (Ctrl+S)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2ZM7 21v-8h10v8M7 3v6h8"/></svg><span>Save</span></button>
+        </div>
+
+        <div class="conflict-banner" id="conflictBanner" hidden><div><strong>Newer changes are available.</strong><span>This document was updated in another session. Copy your edits before reloading.</span></div><button id="reloadDocBtn">Reload latest</button></div>
+        <div class="editor-scroll"><div class="paper"><div id="editor" class="editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Document content" data-placeholder="Start writing something wonderful..."></div></div><div class="paper-footer"><span>✳ &nbsp; Your words, your space.</span><span id="wordCount">0 words</span></div></div>
+      </section>
+    </main>
+
+    <aside class="details-panel" id="detailsPanel" aria-label="Document details"><div class="details-top"><span>DOCUMENT DETAILS</span><button id="closeDetailsBtn" class="close-details" aria-label="Close document details">×</button></div><div id="detailsContent" class="details-content"><div class="details-placeholder"><span>✳</span><p>Select a document to see its details and sharing options.</p></div></div></aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+</body>
+</html>
